@@ -725,10 +725,12 @@ class SimpleLightbox {
     }
 
     zoomPanElement(targetOffsetX, targetOffsetY, targetScale) {
+			// Use the new translate property (https://developer.mozilla.org/en-US/docs/Web/CSS/translate)
+			this.currentImage.style.translate = targetOffsetX + " " + targetOffsetY;
 
-        this.currentImage.style[this.transitionPrefix + 'transform'] = 'translate(' + targetOffsetX + ',' + targetOffsetY + ') scale(' + targetScale + ')';
-
-    };
+			// Use the new scale property (https://developer.mozilla.org/en-US/docs/Web/CSS/scale)
+			this.currentImage.style.scale = targetScale;
+		};
 
     minMax(value, min, max) {
         return (value < min) ? min : (value > max) ? max : value;

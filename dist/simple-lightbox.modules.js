@@ -10,18 +10,20 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _createForOfIteratorHelper(r, e) { var t = "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (!t) { if (Array.isArray(r) || (t = _unsupportedIterableToArray(r)) || e && r && "number" == typeof r.length) { t && (r = t); var _n = 0, F = function F() {}; return { s: F, n: function n() { return _n >= r.length ? { done: !0 } : { done: !1, value: r[_n++] }; }, e: function e(r) { throw r; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var o, a = !0, u = !1; return { s: function s() { t = t.call(r); }, n: function n() { var r = t.next(); return a = r.done, r; }, e: function e(r) { u = !0, o = r; }, f: function f() { try { a || null == t["return"] || t["return"](); } finally { if (u) throw o; } } }; }
+function _toConsumableArray(r) { return _arrayWithoutHoles(r) || _iterableToArray(r) || _unsupportedIterableToArray(r) || _nonIterableSpread(); }
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r); }
+function _arrayWithoutHoles(r) { if (Array.isArray(r)) return _arrayLikeToArray(r); }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
+function _defineProperties(e, r) { for (var t = 0; t < r.length; t++) { var o = r[t]; o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(e, _toPropertyKey(o.key), o); } }
+function _createClass(e, r, t) { return r && _defineProperties(e.prototype, r), t && _defineProperties(e, t), Object.defineProperty(e, "prototype", { writable: !1 }), e; }
+function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
 var SimpleLightbox = /*#__PURE__*/function () {
   function SimpleLightbox(elements, options) {
     var _this = this;
@@ -234,7 +236,7 @@ var SimpleLightbox = /*#__PURE__*/function () {
     }
     this.addEvents();
   }
-  _createClass(SimpleLightbox, [{
+  return _createClass(SimpleLightbox, [{
     key: "checkPassiveEventsSupport",
     value: function checkPassiveEventsSupport() {
       // https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md#feature-detection
@@ -659,7 +661,11 @@ var SimpleLightbox = /*#__PURE__*/function () {
   }, {
     key: "zoomPanElement",
     value: function zoomPanElement(targetOffsetX, targetOffsetY, targetScale) {
-      this.currentImage.style[this.transitionPrefix + 'transform'] = 'translate(' + targetOffsetX + ',' + targetOffsetY + ') scale(' + targetScale + ')';
+      // Use the new translate property (https://developer.mozilla.org/en-US/docs/Web/CSS/translate)
+      this.currentImage.style.translate = targetOffsetX + " " + targetOffsetY;
+
+      // Use the new scale property (https://developer.mozilla.org/en-US/docs/Web/CSS/scale)
+      this.currentImage.style.scale = targetScale;
     }
   }, {
     key: "minMax",
@@ -1279,7 +1285,7 @@ var SimpleLightbox = /*#__PURE__*/function () {
   }, {
     key: "fadeOut",
     value: function fadeOut(elements, duration, callback) {
-      var _this10 = this;
+      var _this0 = this;
       elements = this.wrap(elements);
       var _iterator5 = _createForOfIteratorHelper(elements),
         _step5;
@@ -1295,7 +1301,7 @@ var SimpleLightbox = /*#__PURE__*/function () {
       }
       this.isFadeIn = false;
       var step = 16.66666 / (duration || this.options.fadeSpeed),
-        fade = function fade() {
+        _fade = function fade() {
           var currentOpacity = parseFloat(elements[0].style.opacity);
           if ((currentOpacity -= step) < 0) {
             var _iterator6 = _createForOfIteratorHelper(elements),
@@ -1312,7 +1318,7 @@ var SimpleLightbox = /*#__PURE__*/function () {
             } finally {
               _iterator6.f();
             }
-            callback && callback.call(_this10, elements);
+            callback && callback.call(_this0, elements);
           } else {
             var _iterator7 = _createForOfIteratorHelper(elements),
               _step7;
@@ -1326,15 +1332,15 @@ var SimpleLightbox = /*#__PURE__*/function () {
             } finally {
               _iterator7.f();
             }
-            requestAnimationFrame(fade);
+            requestAnimationFrame(_fade);
           }
         };
-      fade();
+      _fade();
     }
   }, {
     key: "fadeIn",
     value: function fadeIn(elements, duration, callback, display) {
-      var _this11 = this;
+      var _this1 = this;
       elements = this.wrap(elements);
       var _iterator8 = _createForOfIteratorHelper(elements),
         _step8;
@@ -1354,7 +1360,7 @@ var SimpleLightbox = /*#__PURE__*/function () {
       this.isFadeIn = true;
       var opacityTarget = parseFloat(elements[0].dataset.opacityTarget || 1),
         step = 16.66666 * opacityTarget / (duration || this.options.fadeSpeed),
-        fade = function fade() {
+        _fade2 = function fade() {
           var currentOpacity = parseFloat(elements[0].style.opacity);
           if (!((currentOpacity += step) > opacityTarget)) {
             var _iterator9 = _createForOfIteratorHelper(elements),
@@ -1371,63 +1377,63 @@ var SimpleLightbox = /*#__PURE__*/function () {
             } finally {
               _iterator9.f();
             }
-            if (!_this11.isFadeIn) return;
-            requestAnimationFrame(fade);
+            if (!_this1.isFadeIn) return;
+            requestAnimationFrame(_fade2);
           } else {
-            var _iterator10 = _createForOfIteratorHelper(elements),
-              _step10;
+            var _iterator0 = _createForOfIteratorHelper(elements),
+              _step0;
             try {
-              for (_iterator10.s(); !(_step10 = _iterator10.n()).done;) {
-                var _element2 = _step10.value;
+              for (_iterator0.s(); !(_step0 = _iterator0.n()).done;) {
+                var _element2 = _step0.value;
                 if (_element2) {
                   _element2.style.opacity = opacityTarget;
                 }
               }
             } catch (err) {
-              _iterator10.e(err);
+              _iterator0.e(err);
             } finally {
-              _iterator10.f();
+              _iterator0.f();
             }
-            callback && callback.call(_this11, elements);
+            callback && callback.call(_this1, elements);
           }
         };
-      fade();
+      _fade2();
     }
   }, {
     key: "hide",
     value: function hide(elements) {
       elements = this.wrap(elements);
-      var _iterator11 = _createForOfIteratorHelper(elements),
-        _step11;
+      var _iterator1 = _createForOfIteratorHelper(elements),
+        _step1;
       try {
-        for (_iterator11.s(); !(_step11 = _iterator11.n()).done;) {
-          var element = _step11.value;
+        for (_iterator1.s(); !(_step1 = _iterator1.n()).done;) {
+          var element = _step1.value;
           if (element.style.display != 'none') {
             element.dataset.initialDisplay = element.style.display;
           }
           element.style.display = 'none';
         }
       } catch (err) {
-        _iterator11.e(err);
+        _iterator1.e(err);
       } finally {
-        _iterator11.f();
+        _iterator1.f();
       }
     }
   }, {
     key: "show",
     value: function show(elements, display) {
       elements = this.wrap(elements);
-      var _iterator12 = _createForOfIteratorHelper(elements),
-        _step12;
+      var _iterator10 = _createForOfIteratorHelper(elements),
+        _step10;
       try {
-        for (_iterator12.s(); !(_step12 = _iterator12.n()).done;) {
-          var element = _step12.value;
+        for (_iterator10.s(); !(_step10 = _iterator10.n()).done;) {
+          var element = _step10.value;
           element.style.display = element.dataset.initialDisplay || display || 'block';
         }
       } catch (err) {
-        _iterator12.e(err);
+        _iterator10.e(err);
       } finally {
-        _iterator12.f();
+        _iterator10.f();
       }
     }
   }, {
@@ -1439,21 +1445,52 @@ var SimpleLightbox = /*#__PURE__*/function () {
     key: "on",
     value: function on(events, callback) {
       events = this.wrap(events);
+      var _iterator11 = _createForOfIteratorHelper(this.elements),
+        _step11;
+      try {
+        for (_iterator11.s(); !(_step11 = _iterator11.n()).done;) {
+          var element = _step11.value;
+          if (!element.fullyNamespacedEvents) {
+            element.fullyNamespacedEvents = {};
+          }
+          var _iterator12 = _createForOfIteratorHelper(events),
+            _step12;
+          try {
+            for (_iterator12.s(); !(_step12 = _iterator12.n()).done;) {
+              var event = _step12.value;
+              element.fullyNamespacedEvents[event] = callback;
+              element.addEventListener(event, callback);
+            }
+          } catch (err) {
+            _iterator12.e(err);
+          } finally {
+            _iterator12.f();
+          }
+        }
+      } catch (err) {
+        _iterator11.e(err);
+      } finally {
+        _iterator11.f();
+      }
+      return this;
+    }
+  }, {
+    key: "off",
+    value: function off(events) {
+      events = this.wrap(events);
       var _iterator13 = _createForOfIteratorHelper(this.elements),
         _step13;
       try {
         for (_iterator13.s(); !(_step13 = _iterator13.n()).done;) {
           var element = _step13.value;
-          if (!element.fullyNamespacedEvents) {
-            element.fullyNamespacedEvents = {};
-          }
           var _iterator14 = _createForOfIteratorHelper(events),
             _step14;
           try {
             for (_iterator14.s(); !(_step14 = _iterator14.n()).done;) {
               var event = _step14.value;
-              element.fullyNamespacedEvents[event] = callback;
-              element.addEventListener(event, callback);
+              if (typeof element.fullyNamespacedEvents !== 'undefined' && event in element.fullyNamespacedEvents) {
+                element.removeEventListener(event, element.fullyNamespacedEvents[event]);
+              }
             }
           } catch (err) {
             _iterator14.e(err);
@@ -1465,37 +1502,6 @@ var SimpleLightbox = /*#__PURE__*/function () {
         _iterator13.e(err);
       } finally {
         _iterator13.f();
-      }
-      return this;
-    }
-  }, {
-    key: "off",
-    value: function off(events) {
-      events = this.wrap(events);
-      var _iterator15 = _createForOfIteratorHelper(this.elements),
-        _step15;
-      try {
-        for (_iterator15.s(); !(_step15 = _iterator15.n()).done;) {
-          var element = _step15.value;
-          var _iterator16 = _createForOfIteratorHelper(events),
-            _step16;
-          try {
-            for (_iterator16.s(); !(_step16 = _iterator16.n()).done;) {
-              var event = _step16.value;
-              if (typeof element.fullyNamespacedEvents !== 'undefined' && event in element.fullyNamespacedEvents) {
-                element.removeEventListener(event, element.fullyNamespacedEvents[event]);
-              }
-            }
-          } catch (err) {
-            _iterator16.e(err);
-          } finally {
-            _iterator16.f();
-          }
-        }
-      } catch (err) {
-        _iterator15.e(err);
-      } finally {
-        _iterator15.f();
       }
       return this;
     }
@@ -1579,8 +1585,6 @@ var SimpleLightbox = /*#__PURE__*/function () {
       return this;
     }
   }]);
-  return SimpleLightbox;
 }();
-var _default = SimpleLightbox;
-exports["default"] = _default;
+var _default = exports["default"] = SimpleLightbox;
 global.SimpleLightbox = SimpleLightbox;
